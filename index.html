@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sprite Animation POC</title>
+    <style>
+      body {
+        display: grid;
+        place-content: center;
+        height: 100vh;
+        padding: 16px;
+        background: hsl(210deg 15% 6%);
+      }
+
+      @keyframes sprite {
+        from {
+          object-position: 0% 0%;
+        }
+        to {
+          object-position: 100% 0%;
+        }
+      }
+
+      .guitar {
+        width: 142px;
+        height: 400px;
+
+        object-fit: cover;
+        animation: sprite 1s steps(5, jump-none) infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <img
+        class="guitar"
+        src="assets/guitar-animation-sprite-5-frames.png"
+        alt="a spinning guitar"
+      />
+    </main>
+  </body>
+</html>
